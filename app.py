@@ -7,10 +7,11 @@ Original file is located at
     https://colab.research.google.com/drive/1whXDDNdBl1Vij4fNHOqnyKD1pdgSocGx
 """
 
-import streamlit as st
 import pandas as pd
+import numpy as np
 import joblib
-
+import streamlit as st
+import sklearn  
 # ------------------------------
 # Configuración de la app
 # ------------------------------
@@ -30,7 +31,7 @@ st.write(
 # ------------------------------
 @st.cache_resource
 def cargar_modelo():
-    return joblib.load("modelo_svc.pkl")
+    return joblib.load("svc_diabetes.pkl")
 
 modelo = cargar_modelo()
 
